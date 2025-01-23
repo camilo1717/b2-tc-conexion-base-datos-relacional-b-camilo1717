@@ -21,6 +21,8 @@ Es una librería de mapeo funcional reactivo (FRP) para Scala que utiliza IO de 
 | Seguridad en tiempo de compilacion| Si (El compilador verifica las consultas)|Si (El compilador verifica las consultas) |
 | Composabilidad|Alta - Permite componer consultas como colecciones de Scala|Media - Permite componer consultas, pero con un enfoque más reactivo|
 | API Asincrónica | Si - utiliza "Future" y sigue la interfaz Reactive Streams| Si - Utiliza IO de Cats Effect y sigue la interfaz Reactive Streams|
+| Soporte de SQL | Si - Permite escribir consultas en SQL directamente | Si - Permite escribir consultas en SQL directamente |
+
 # Documentar cómo establecer una conexión a una base de datos relacional (mysql). Siga los siguientes pasos:
 # Genere una base de datos en mysql
 # Genere una tabla con datos de prueba
