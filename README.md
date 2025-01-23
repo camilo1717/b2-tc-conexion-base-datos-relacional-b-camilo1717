@@ -1,4 +1,6 @@
 # Trabajo Consulta: Conexión Base de Datos Relacional
+
+Estudiante: Camilo José Fierro Maurad
 # Indicaciones
 Genere un repositorio en github y documente los siguientes puntos en la wiki o archivo README:
 
@@ -155,7 +157,7 @@ object ConexionMySQL extends App {
   }
 }
 ```
-Referencias:
+## Referencias:
 
 "Slick 3.3.3 Documentation." Lightbend Inc. Disponible en: http://slick.lightbend.com/doc/3.3.3/
 
