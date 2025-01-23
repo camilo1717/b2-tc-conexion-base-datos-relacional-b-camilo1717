@@ -7,11 +7,15 @@ Genere un repositorio en github y documente los siguientes puntos en la wiki o a
 Java Database Connectivity (JDBC) es una API (Interfaz de Programación de Aplicaciones) de Java que permite a las aplicaciones Java conectarse y ejecutar operaciones en bases de datos. JDBC proporciona un conjunto de interfaces y clases que permiten a los desarrolladores interactuar con diversas bases de datos de manera uniforme y sencilla.
 # Documente 2 librerías de Scala que permitan conectarse a una base de datos relacional. En una tabla resuma sus diferencias.
 
+Slick
+Es una librería de mapeo funcional relacional (FRM) para Scala que permite escribir consultas SQL de manera funcional y segura en tiempo de compilación
 
+Doobie
+Es una librería de mapeo funcional reactivo (FRP) para Scala que utiliza IO de Cats Effect para manejar operaciones asincrónicas
 
 | Encabezado 1 | Slick | Doobie |
 |--------------|--------------|--------------|
-| Fila 1, Col 1| Fila 1, Col 2| Fila 1, Col 3|
+| Tipo de Mapeo| Fila 1, Col 2| Fila 1, Col 3|
 | Fila 2, Col 1| Fila 2, Col 2| Fila 2, Col 3|
 | Fila 3, Col 1| Fila 3, Col 2| Fila 3, Col 3|
 
