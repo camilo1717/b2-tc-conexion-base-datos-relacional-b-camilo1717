@@ -17,7 +17,7 @@ Es una librería de mapeo funcional reactivo (FRP) para Scala que utiliza IO de 
 |--------------|--------------|--------------|
 |Tipo de Mapeo| Mapeo Funcional Relacional (FRM)	|Mapeo Funcional Reactivo (FRP)|
 | Seguridad en tiempo de compilacion| Si (El compilador verifica las consultas)|Si (El compilador verifica las consultas) |
-| Fila 3, Col 1| Fila 3, Col 2| Fila 3, Col 3|
+| Composabilidad|Alta - Permite componer consultas como colecciones de Scala|Media - Permite componer consultas, pero con un enfoque más reactivo|
 |              |              |              |
 # Documentar cómo establecer una conexión a una base de datos relacional (mysql). Siga los siguientes pasos:
 # Genere una base de datos en mysql
