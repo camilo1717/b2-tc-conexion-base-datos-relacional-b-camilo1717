@@ -60,6 +60,28 @@ INSERT INTO equipos_futbol_ecuador (nombre, ciudad, fundacion, titulos_nacionale
 ('Libertad Futbol Club', 'Loja', '2017-05-17', 0);
 ```
 - Desde Scala establezca la conexión a la base datos
+
+1. **Configuración de la conexión:**
+   - `url`: Ruta de acceso a la base de datos, que incluye el nombre de la base (`PFyR`) y `useSSL=false` para deshabilitar el uso de SSL.
+   - `usuario` y `contraseña`: Credenciales para acceder al servidor MySQL.
+
+2. **Registrar el driver JDBC:**
+   Se utiliza `Class.forName("com.mysql.cj.jdbc.Driver")` para cargar el driver necesario.
+
+3. **Establecer conexión:**
+   - Se utiliza `DriverManager.getConnection` con los parámetros definidos.
+
+4. **Ejecutar una consulta:**
+   - Se crea un `Statement` con `conexion.createStatement()`.
+   - La consulta `SELECT * FROM equipos_futbol_ecuador` se ejecuta y el resultado se almacena en `resultSet`.
+
+5. **Procesamiento resultados:**
+   - Se recorren las filas de `resultSet` para construir objetos `Equipo`.
+
+6. **Libero recursos:**
+   - Se cierran los recursos en el bloque `finally` para evitar fugas de memoria.
+
+
 - (opcional) Desde Scala realice la consulta de todos los datos de la tabla de prueba. 
 
 El tercer punto lo documenta adjuntando capturas de pantalla. Adjuntar referencias.
