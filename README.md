@@ -59,6 +59,9 @@ INSERT INTO equipos_futbol_ecuador (nombre, ciudad, fundacion, titulos_nacionale
 INSERT INTO equipos_futbol_ecuador (nombre, ciudad, fundacion, titulos_nacionales) VALUES
 ('Libertad Futbol Club', 'Loja', '2017-05-17', 0);
 ```
+
+![image](https://github.com/user-attachments/assets/1badb56a-fcb4-4d07-857b-ccb087cec8ae)
+
 - Desde Scala establezca la conexión a la base datos
 
 1. **Dependencia y Configuración de la conexión:**
@@ -80,11 +83,14 @@ INSERT INTO equipos_futbol_ecuador (nombre, ciudad, fundacion, titulos_nacionale
 4. **Establecer conexión:**
    - Se utiliza `DriverManager.getConnection` con los parámetros definidos.
 
+![image](https://github.com/user-attachments/assets/06c4b177-29b5-4246-94d0-81655c9cc95f)
+
 5. **Ejecutar una consulta:**
    - Se crea un `Statement` con `conexion.createStatement()`.
    - La consulta `SELECT * FROM equipos_futbol_ecuador` se ejecuta y el resultado se almacena en `resultSet`.
 
-![image](https://github.com/user-attachments/assets/15f34c83-f4ca-4f7d-9aae-403a246e5482)
+![image](https://github.com/user-attachments/assets/73abef75-e940-4ecd-9efa-1a5393695a0c)
+
 
 6. **Procesamiento resultados:**
    - Se recorren las filas de `resultSet` para construir objetos `Equipo`.
@@ -92,6 +98,68 @@ INSERT INTO equipos_futbol_ecuador (nombre, ciudad, fundacion, titulos_nacionale
 7. **Libero recursos:**
    - Se cierran los recursos en el bloque `finally` para evitar fugas de memoria.
 
+8. **Los resultados aparecen en la terminal:**
+![image](https://github.com/user-attachments/assets/b0a5be56-c6d2-442f-bbe1-87f3470454e4)
+
+## Código Completo:
+```Scala
+import java.sql.{Connection, DriverManager, ResultSet, Date}
+
+
+case class Equipo(id: Int, nombre: String, ciudad: String, fundacion: Date, titulos_nacionales: Int)
+
+object ConexionMySQL extends App {
+  val url = "jdbc:mysql://localhost:3306/PFyR?useSSL=false"
+  val usuario = "root"
+  val contraseña = "Kooper1702"
+
+  var conexion: Connection = null
+  var declaracion: java.sql.Statement = null
+  var resultSet: ResultSet = null
+
+  try {
+    // Esto sirva para poder registrar el driver JDBC
+    Class.forName("com.mysql.cj.jdbc.Driver")
+
+    // Establecer la conexión
+    conexion = DriverManager.getConnection(url, usuario, contraseña)
+
+    println("Conexión establecida con éxito!")
+
+
+    declaracion = conexion.createStatement()
+    resultSet = declaracion.executeQuery("SELECT * FROM equipos_futbol_ecuador")
+    var equipos = List[Equipo]()
+
+    while (resultSet.next()) {
+      val equipo = Equipo(
+        resultSet.getInt("id"),
+        resultSet.getString("nombre"),
+        resultSet.getString("ciudad"),
+        resultSet.getDate("fundacion"),
+        resultSet.getInt("titulos_nacionales")
+      )
+      equipos = equipo :: equipos
+    }
+
+    // Imprimir los datos de los equipos de futbol
+    equipos.foreach(e => println(s"Nombre: ${e.nombre}, Ciudad: ${e.ciudad}, Fundación: ${e.fundacion}, Títulos: ${e.titulos_nacionales}"))
+
+  } catch {
+    case e: Exception => e.printStackTrace()
+  } finally {
+
+    if (resultSet != null) { resultSet.close() }
+    if (declaracion != null) { declaracion.close() }
+    if (conexion != null) { conexion.close() }
+  }
+}
+```
+Referencias:
+
+"Slick 3.3.3 Documentation." Lightbend Inc. Disponible en: http://slick.lightbend.com/doc/3.3.3/
+
+"Doobie Documentation." Tpolecat. Disponible en: https://tpolecat.github.io/doobie/
 
 - (opcional) Desde Scala realice la consulta de todos los datos de la tabla de prueba. 
 
