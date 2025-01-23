@@ -62,13 +62,16 @@ INSERT INTO equipos_futbol_ecuador (nombre, ciudad, fundacion, titulos_nacionale
 - Desde Scala establezca la conexión a la base datos
 
 1. **Dependencia y Configuración de la conexión:**
+   
    Agrego la depencia en Scala que permite interactuar con MySQL
 
 ![image](https://github.com/user-attachments/assets/4e7e3347-fd97-4653-96a7-a3753ab47022)
 
    - Luego agrego la ruta de acceso:
+     
    - `url`: Ruta de acceso a la base de datos, que incluye el nombre de la base (`PFyR`) y `useSSL=false` para deshabilitar el uso de SSL.
    - `usuario` y `contraseña`: Credenciales para acceder al servidor MySQL.
+     
 ![image](https://github.com/user-attachments/assets/115b2ab1-4fff-4426-96db-a9d6ddfd9e4b)
 
 3. **Registrar el driver JDBC:**
