@@ -24,9 +24,14 @@ Es una librería de mapeo funcional reactivo (FRP) para Scala que utiliza IO de 
 | Soporte de SQL | Si - Permite escribir consultas en SQL directamente | Si - Permite escribir consultas en SQL directamente |
 
 # Documentar cómo establecer una conexión a una base de datos relacional (mysql). Siga los siguientes pasos:
-# Genere una base de datos en mysql
-# Genere una tabla con datos de prueba
-# Desde Scala establezca la conexión a la base datos
-# (opcional) Desde Scala realice la consulta de todos los datos de la tabla de prueba. 
+- Genere una base de datos en mysql
+  
+Primero creé una base de datos en MySQL Workbench
+```sql
+CREATE DATABASE PFyR;
+```
+- Genere una tabla con datos de prueba
+- Desde Scala establezca la conexión a la base datos
+- (opcional) Desde Scala realice la consulta de todos los datos de la tabla de prueba. 
 
 El tercer punto lo documenta adjuntando capturas de pantalla. Adjuntar referencias.
