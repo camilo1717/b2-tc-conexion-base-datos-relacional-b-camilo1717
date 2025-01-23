@@ -15,8 +15,8 @@ Es una librería de mapeo funcional reactivo (FRP) para Scala que utiliza IO de 
 
 | Caracteristica | Slick | Doobie |
 |--------------|--------------|--------------|
-| # Tipo de Mapeo| Mapeo Funcional Relacional (FRM)	|Mapeo Funcional Reactivo (FRP)|
-| Fila 2, Col 1| Fila 2, Col 2| |
+|Tipo de Mapeo| Mapeo Funcional Relacional (FRM)	|Mapeo Funcional Reactivo (FRP)|
+| Seguridad en tiempo de compilacion| Si(El compilador verifica las consultas)|Si(El compilador verifica las consultas) |
 | Fila 3, Col 1| Fila 3, Col 2| Fila 3, Col 3|
 
 # Documentar cómo establecer una conexión a una base de datos relacional (mysql). Siga los siguientes pasos:
