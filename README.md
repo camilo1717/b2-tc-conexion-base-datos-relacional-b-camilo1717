@@ -84,6 +84,8 @@ INSERT INTO equipos_futbol_ecuador (nombre, ciudad, fundacion, titulos_nacionale
    - Se crea un `Statement` con `conexion.createStatement()`.
    - La consulta `SELECT * FROM equipos_futbol_ecuador` se ejecuta y el resultado se almacena en `resultSet`.
 
+![image](https://github.com/user-attachments/assets/15f34c83-f4ca-4f7d-9aae-403a246e5482)
+
 6. **Procesamiento resultados:**
    - Se recorren las filas de `resultSet` para construir objetos `Equipo`.
 
