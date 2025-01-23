@@ -61,24 +61,30 @@ INSERT INTO equipos_futbol_ecuador (nombre, ciudad, fundacion, titulos_nacionale
 ```
 - Desde Scala establezca la conexión a la base datos
 
-1. **Configuración de la conexión:**
+1. **Dependencia y Configuración de la conexión:**
+   Agrego la depencia en Scala que permite interactuar con MySQL
+
+![image](https://github.com/user-attachments/assets/4e7e3347-fd97-4653-96a7-a3753ab47022)
+
+   - Luego agrego la ruta de acceso:
    - `url`: Ruta de acceso a la base de datos, que incluye el nombre de la base (`PFyR`) y `useSSL=false` para deshabilitar el uso de SSL.
    - `usuario` y `contraseña`: Credenciales para acceder al servidor MySQL.
+![image](https://github.com/user-attachments/assets/115b2ab1-4fff-4426-96db-a9d6ddfd9e4b)
 
-2. **Registrar el driver JDBC:**
+3. **Registrar el driver JDBC:**
    Se utiliza `Class.forName("com.mysql.cj.jdbc.Driver")` para cargar el driver necesario.
 
-3. **Establecer conexión:**
+4. **Establecer conexión:**
    - Se utiliza `DriverManager.getConnection` con los parámetros definidos.
 
-4. **Ejecutar una consulta:**
+5. **Ejecutar una consulta:**
    - Se crea un `Statement` con `conexion.createStatement()`.
    - La consulta `SELECT * FROM equipos_futbol_ecuador` se ejecuta y el resultado se almacena en `resultSet`.
 
-5. **Procesamiento resultados:**
+6. **Procesamiento resultados:**
    - Se recorren las filas de `resultSet` para construir objetos `Equipo`.
 
-6. **Libero recursos:**
+7. **Libero recursos:**
    - Se cierran los recursos en el bloque `finally` para evitar fugas de memoria.
 
 
