@@ -29,8 +29,36 @@ Es una librería de mapeo funcional reactivo (FRP) para Scala que utiliza IO de 
 Primero creé una base de datos en MySQL Workbench
 ```sql
 CREATE DATABASE PFyR;
+USE PFyR;
 ```
 - Genere una tabla con datos de prueba
+
+Luego generé los datos de la tabla
+
+```sql
+CREATE TABLE equipos_futbol_ecuador (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL,
+    ciudad VARCHAR(50) NOT NULL,
+    fundacion DATE,
+    titulos_nacionales INT
+);
+
+INSERT INTO equipos_futbol_ecuador (nombre, ciudad, fundacion, titulos_nacionales) VALUES 
+('Barcelona Sporting Club', 'Guayaquil', '1925-05-01', 16);
+
+INSERT INTO equipos_futbol_ecuador (nombre, ciudad, fundacion, titulos_nacionales) VALUES 
+('Club Sport Emelec', 'Guayaquil', '1929-04-28', 14);
+
+INSERT INTO equipos_futbol_ecuador (nombre, ciudad, fundacion, titulos_nacionales) VALUES 
+('Liga Deportiva Universitaria de Quito', 'Quito', '1930-01-11', 11);
+
+INSERT INTO equipos_futbol_ecuador (nombre, ciudad, fundacion, titulos_nacionales) VALUES 
+('Club Deportivo El Nacional', 'Quito', '1964-03-01', 13);
+
+INSERT INTO equipos_futbol_ecuador (nombre, ciudad, fundacion, titulos_nacionales) VALUES
+('Libertad Futbol Club', 'Loja', '2017-05-17', 0);
+```
 - Desde Scala establezca la conexión a la base datos
 - (opcional) Desde Scala realice la consulta de todos los datos de la tabla de prueba. 
 
