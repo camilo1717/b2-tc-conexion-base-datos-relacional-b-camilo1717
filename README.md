@@ -65,6 +65,9 @@ INSERT INTO equipos_futbol_ecuador (nombre, ciudad, fundacion, titulos_nacionale
 ![image](https://github.com/user-attachments/assets/1badb56a-fcb4-4d07-857b-ccb087cec8ae)
 
 - Desde Scala establezca la conexión a la base datos
+ - (opcional) Desde Scala realice la consulta de todos los datos de la tabla de prueba. 
+
+Este tercer punto lo documenta adjuntando capturas de pantalla. Adjuntar referencias.
 
 1. **Dependencia y Configuración de la conexión:**
    
@@ -163,6 +166,4 @@ object ConexionMySQL extends App {
 
 "Doobie Documentation." Tpolecat. Disponible en: https://tpolecat.github.io/doobie/
 
-- (opcional) Desde Scala realice la consulta de todos los datos de la tabla de prueba. 
 
-El tercer punto lo documenta adjuntando capturas de pantalla. Adjuntar referencias.
