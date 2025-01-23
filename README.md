@@ -1,1 +1,1 @@
-# b2-tc-conexion-base-datos-relacional-b-camilo1717
+# Trabajo Consulta 2: Conexión base de datos relacional
