@@ -13,9 +13,9 @@ Es una librería de mapeo funcional relacional (FRM) para Scala que permite escr
 Doobie
 Es una librería de mapeo funcional reactivo (FRP) para Scala que utiliza IO de Cats Effect para manejar operaciones asincrónicas
 
-| Encabezado 1 | Slick | Doobie |
+| Caracteristica | Slick | Doobie |
 |--------------|--------------|--------------|
-| Tipo de Mapeo| Mapeo Funcional Relacional (FRM)	|Mapeo Funcional Reactivo (FRP)|
+| # Tipo de Mapeo| Mapeo Funcional Relacional (FRM)	|Mapeo Funcional Reactivo (FRP)|
 | Fila 2, Col 1| Fila 2, Col 2| |
 | Fila 3, Col 1| Fila 3, Col 2| Fila 3, Col 3|
 
